@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -76,14 +75,13 @@
         }
     </style>
 </head>
-
 <body>
     <div class="tooltip"><button onclick="link()">Click here</button>
         <span class="tooltiptext">Don't Click!</span>
     </div>
     <script>
         const link = () => {
-            const alert = confirm(`\nRedirect to the Dark Web?`)
+            const alert = confirm(`\nRedirect to the Dark Web?\nRecommended to use Tor Browser`)
             if (alert === true) {
                 window.location.href = "https://zqktlwi4fecvo6ri.onion/"
             } else if (alert === false) {
@@ -93,5 +91,4 @@
         }
     </script>
 </body>
-
 </html>
