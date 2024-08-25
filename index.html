@@ -1,98 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dark Web</title>
     <style>
-        * {
-            font-family: sans-serif
-        }
-        
-        body {
-            margin: 0;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background-color: black;
-            text-align: center;
-            color: white;
-        }
+      * {
+        font-size: 13px;
+        font-family: sans-serif;
+      }
 
-        button {
-            border: 0 solid;
-            border-radius: 5px;
-            text-align: center;
-            padding: 5px;
-            background-color: white;
-            color: black;
-        }
+      body {
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: black;
+        text-align: center;
+        color: white;
+      }
 
-        button:hover {
-            background-color: grey;
-            color: white;
-        }
+      button {
+        border: 0 solid;
+        border-radius: 6px;
+        text-align: center;
+        padding: 5px;
+        background-color: white;
+        color: black;
+      }
 
-        button:active {
-            background-color: red;
-            color: white;
-        }
+      button:hover {
+        background-color: grey;
+        color: white;
+      }
 
-        .tooltip {
-            position: relative;
-            display: inline-block;
-            border-bottom: 1px dotted black;
-        }
+      button:active {
+        background-color: red;
+        color: white;
+      }
 
-        .tooltip .tooltiptext {
-            visibility: hidden;
-            width: 120px;
-            background-color: #555;
-            color: #fff;
-            text-align: center;
-            padding: 5px 0;
-            border-radius: 6px;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%;
-            left: 50%;
-            margin-left: -60px;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+      }
 
-        .tooltip .tooltiptext::after {
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            margin-left: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: #555 transparent transparent transparent;
-        }
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 126px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
 
-        .tooltip:hover .tooltiptext {
-            visibility: visible;
-            opacity: 1;
-        }
+      .tooltip .tooltiptext::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
     </style>
-</head>
-<body>
-    <div class="tooltip"><button onclick="link()">Click here</button>
-        <span class="tooltiptext">Don't Click!</span>
+  </head>
+  <body>
+    <div class="tooltip">
+      <button onclick="link()">Click here</button>
+      <span class="tooltiptext">Don't Click!</span>
     </div>
     <script>
-        const link = () => {
-            const alert = confirm(`\nRedirect to the Dark Web?\n(Recommended to use Tor Browser)`)
-            if (alert === true) {
-                window.location.href = "https://zqktlwi4fecvo6ri.onion/"
-            } else if (alert === false) {
-                ;;
-            }
-            alert()
+      const link = () => {
+        const alert = confirm(
+          `\nRedirect to the Dark Web?\n(Recommended to use Tor Browser)`
+        )
+        if (alert === true) {
+          window.location.href = 'https://zqktlwi4fecvo6ri.onion/'
+        } else if (alert === false) {
         }
+        alert()
+      }
     </script>
-</body>
+  </body>
 </html>
