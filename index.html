@@ -6,38 +6,39 @@
     <title>Dark Web</title>
     <style>
       * {
-        font-size: 13px;
+        font-size: 14px;
         font-family: sans-serif;
+        text-align: center;
+        color: #fff;
+        background-color: #111;
       }
 
+      ::selection { background-color: inherit }
+
       body {
-        margin: 0;
-        position: absolute;
-        left: 50%;
-        top: 50%;
+        position: fixed;
+        left: 50%; top: 50%;
+        
+        margin: 0; padding: 0;
         transform: translate(-50%, -50%);
-        background-color: black;
-        text-align: center;
-        color: white;
       }
 
       button {
+        padding: 6px;
         border: 0 solid;
         border-radius: 6px;
-        text-align: center;
-        padding: 5px;
-        background-color: white;
-        color: black;
+        color: #000;
+        background-color: #fff;
       }
 
       button:hover {
-        background-color: grey;
-        color: white;
+        color: #fff;
+        background-color: #555;
       }
 
       button:active {
+        color: #fff;
         background-color: red;
-        color: white;
       }
 
       .tooltip {
@@ -47,27 +48,30 @@
       }
 
       .tooltip .tooltiptext {
-        visibility: hidden;
-        width: 126px;
-        background-color: #555;
-        color: #fff;
-        text-align: center;
-        padding: 5px 0;
-        border-radius: 6px;
-        position: absolute;
         z-index: 1;
-        bottom: 125%;
-        left: 50%;
+        visibility: hidden;
+
+        position: fixed;
+        left: 50%; bottom: 125%;
+
         margin-left: -60px;
+        padding: 5px 0;
+
+        width: 120px;
+        border-radius: 6px;
+
+        color: #fff;
+        background-color: #333;
+        text-transform: capitalize;
+        
         opacity: 0;
         transition: opacity 0.3s;
       }
 
       .tooltip .tooltiptext::after {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 50%;
+        position: fixed;
+        top: 100%; left: 50%;
+
         margin-left: -5px;
         border-style: solid;
         border-color: #555 transparent transparent transparent;
@@ -82,17 +86,13 @@
   <body>
     <div class="tooltip">
       <button onclick="link()">Click here</button>
-      <span class="tooltiptext">Don't Click!</span>
+      <span class="tooltiptext">do not click!</span>
     </div>
     <script>
       const link = () => {
-        const alert = confirm(
-          `\nRedirect to the Dark Web?\n(Recommended to use Tor Browser)`
-        )
-        if (alert === true) {
-          window.location.href = 'https://zqktlwi4fecvo6ri.onion/'
-        } else if (alert === false) {
-        }
+        const alert = confirm(`\nRedirect to the Dark Web?\n(Recommended to use Tor Browser)`)
+        if (alert === true) { window.location.href = 'https://zqktlwi4fecvo6ri.onion/' }
+        else if (alert === false) {}
         alert()
       }
     </script>
