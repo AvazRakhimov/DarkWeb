@@ -3,98 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    
     <title>Dark Web</title>
-    <style>
-      * {
-        font-size: 14px;
-        font-family: sans-serif;
-        text-align: center;
-        color: #fff;
-        background-color: #111;
-      }
+    <meta name="description" content="The Hidden Wiki Link" />
 
-      ::selection { background-color: inherit }
-
-      body {
-        position: fixed;
-        left: 50%; top: 50%;
-        
-        margin: 0; padding: 0;
-        transform: translate(-50%, -50%);
-      }
-
-      button {
-        padding: 6px;
-        border: 0 solid;
-        border-radius: 6px;
-        color: #000;
-        background-color: #fff;
-      }
-
-      button:hover {
-        color: #fff;
-        background-color: #555;
-      }
-
-      button:active {
-        color: #fff;
-        background-color: red;
-      }
-
-      .tooltip {
-        position: relative;
-        display: inline-block;
-        border-bottom: 1px dotted black;
-      }
-
-      .tooltip .tooltiptext {
-        z-index: 1;
-        visibility: hidden;
-
-        position: fixed;
-        left: 50%; bottom: 125%;
-
-        margin-left: -60px;
-        padding: 5px 0;
-
-        width: 120px;
-        border-radius: 6px;
-
-        color: #fff;
-        background-color: #333;
-        text-transform: capitalize;
-        
-        opacity: 0;
-        transition: opacity 0.3s;
-      }
-
-      .tooltip .tooltiptext::after {
-        position: fixed;
-        top: 100%; left: 50%;
-
-        margin-left: -5px;
-        border-style: solid;
-        border-color: #555 transparent transparent transparent;
-      }
-
-      .tooltip:hover .tooltiptext {
-        visibility: visible;
-        opacity: 1;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans" rel="stylesheet">
   </head>
   <body>
     <div class="tooltip">
       <button onclick="link()">Click here</button>
-      <span class="tooltiptext">do not click!</span>
+      <span class="tooltiptext">Do not click!</span>
     </div>
-    <script>
-      const link = () => {
-        const alert = confirm(`\nRedirect to the Dark Web?\n(Recommended to use Tor Browser)`)
-        if (alert === true) { window.location.href = 'https://zqktlwi4fecvo6ri.onion/' }
-        else if (alert === false) {}
-        alert()
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

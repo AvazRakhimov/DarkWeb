@@ -1,0 +1,90 @@
+* {
+  max-width: 500px;
+  
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  color: #fff;
+  background-color: #000;
+
+  font-size: 16px !important;
+  font-family: IBM Plex Sans;
+  text-align: center;
+}
+
+::selection {
+  background-color: inherit;
+}
+
+body {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button {
+  padding: .5em;
+  border: 0 solid;
+  border-radius: 6px;
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #555;
+}
+
+button:active {
+  color: #fff;
+  background-color: red;
+}
+
+
+/* * * * */
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  z-index: 1;
+  visibility: hidden;
+
+  position: fixed;
+  left: 50%;
+  bottom: 125%;
+
+  margin-left: -60px;
+  padding: 5px 0;
+
+  width: 120px;
+  border-radius: 6px;
+
+  color: #fff;
+  background-color: #333;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  position: fixed;
+  top: 100%;
+  left: 50%;
+
+  margin-left: -5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
